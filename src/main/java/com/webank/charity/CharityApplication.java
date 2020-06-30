@@ -301,7 +301,14 @@ public class CharityApplication {
             System.out.println(" load Charity success, contract address is " + contractAddress);
             recordAssetAddr(contractAddress);
             List<BigInteger> ownItemsId=charity.getOwnItemsId().send();
-            return ownItemsId.toString();
+			            			List<String> allItemsId2 = new ArrayList<>();
+			int geshu = ownItemsId.size();
+			for(int i = 0;i < geshu;i++)
+			{
+				allItemsId2.add(ownItemsId.get(i).toString()+"a");
+			}
+
+            return allItemsId2.toString();
         } catch (Exception e2) {
             System.out.println(" load Charity contract failed, error message is  " + e2.getMessage());
             return null;
@@ -334,7 +341,14 @@ public class CharityApplication {
             System.out.println(" load Charity success, contract address is " + contractAddress);
             recordAssetAddr(contractAddress);
             List<BigInteger> partItemsId=charity.getpartItemsId().send();
-            return partItemsId.toString();
+			            			List<String> allItemsId2 = new ArrayList<>();
+			int geshu = partItemsId.size();
+			for(int i = 0;i < geshu;i++)
+			{
+				allItemsId2.add(partItemsId.get(i).toString()+"a");
+			}
+
+            return allItemsId2.toString();
         } catch (Exception e2) {
             System.out.println(" load Charity contract failed, error message is  " + e2.getMessage());
             return null;
@@ -636,7 +650,14 @@ public class CharityApplication {
             System.out.println(" load Charity success, contract address is " + contractAddress);
             recordAssetAddr(contractAddress);
             List<BigInteger> allItemsId=charity.getAllItemsId().send();
-            return allItemsId.toString();
+            			List<String> allItemsId2 = new ArrayList<>();
+			int geshu = allItemsId.size();
+			for(int i = 0;i < geshu;i++)
+			{
+				allItemsId2.add(allItemsId.get(i).toString()+"a");
+			}
+
+            return allItemsId2.toString();
         } catch (Exception e2) {
             System.out.println(" load Charity contract failed, error message is  " + e2.getMessage());
             return null;
